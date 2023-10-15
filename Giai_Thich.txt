@@ -1,0 +1,90 @@
+<!DOCTYPE html>: Đây là khai báo doctype của trang HTML. Nó chỉ định phiên bản HTML mà trang sử dụng, trong trường hợp này là HTML5.
+<html lang="en">: Mở thẻ HTML với thuộc tính lang để chỉ định ngôn ngữ của trang là tiếng Anh.
+<head>: Mở phần đầu của trang web, chứa các thông tin meta, tiêu đề và tệp CSS hoặc JavaScript.
+<meta charset="UTF-8">: Xác định bộ kí tự sử dụng cho trang là UTF-8, đảm bảo hỗ trợ ký tự đa dạng.
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Điều chỉnh cài đặt hiển thị cho các thiết bị di động.
+<title>Website with Login & Registration</title>: Xác định tiêu đề của trang web, sẽ hiển thị trong thanh tiêu đề trình duyệt.
+<link rel="stylesheet" href="/style.css">: Liên kết với tệp CSS bên ngoài được đặt trong style.css.
+<body>: Mở phần thân của trang web, chứa nội dung chính của trang, ví dụ như đoạn văn bản, hình ảnh và tệp JavaScript.
+<header>: Đây là phần tiêu đề của trang web.
+<h2 class="logo">Logo</h2>: Tiêu đề cấp 2 với lớp logo.
+<nav class="navigation">: Đây là thanh điều hướng chứa các liên kết và nút đăng nhập.
+<a href="#">: Các liên kết điều hướng.
+<button class="btnLogin-popup">Login</button>: Nút đăng nhập.
+<script src="script.js"></script>: Liên kết tệp JavaScript bên ngoài được đặt trong script.js.
+Mã CSS:
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&display=swap');:
+ Nhúng font Nunito từ Google Fonts để sử dụng trong trang web.
+*: Chọn tất cả các phần tử trên trang web và áp dụng một số thiết lập mặc định cho chúng, bao gồm 
+việc thiết lập việc box-sizing, font-family và loại bỏ margin và padding.
+body: Cài đặt phong cách cho thẻ <body> của trang web, bao gồm căn giữa nội dung, nền ảnh nền và vị trí của nó.
+header: Cài đặt phong cách cho phần tiêu đề của trang web, bao gồm việc đặt nó ở vị trí cố định,
+ nền, canh lề, và vị trí của các phần tử con.
+.logo: Cài đặt phong cách cho phần tử với lớp logo, bao gồm kích thước và màu chữ.
+.navigation a: Cài đặt phong cách cho các liên kết trong thanh điều hướng, bao gồm màu sắc,
+ cỡ chữ và khoảng cách giữa chúng.
+.navigation a::after: Tạo một thanh ngang dưới các liên kết khi rê chuột qua, bằng cách sử dụng pseudo-element ::after.
+.navigation a:hover::after: Cài đặt hiệu ứng khi di chuột qua liên kết.
+.navigation .btnLogin-popup: Cài đặt phong cách cho nút đăng nhập trong thanh điều hướng.
+.navigation .btnLogin-popup:hover: Cài đặt hiệu ứng khi rê chuột qua nút đăng nhập.
+
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Nunito', sans-serif; }: 
+Đây là một tập hợp các quy tắc áp dụng cho tất cả các phần tử trên trang.
+
+margin: 0; và padding: 0;: Thiết lập margin và padding của tất cả phần tử về 0, loại bỏ khoảng cách không mong muốn.
+box-sizing: border-box;: Điều này đảm bảo rằng kích thước của một phần tử bao gồm cả padding và border,
+ không chỉ nội dung. Điều này giúp quản lý kích thước phần tử dễ dàng hơn.
+font-family: 'Nunito', sans-serif;: Xác định kiểu font mặc định cho tất cả các phần tử 
+trên trang là 'Nunito' và sau đó là các font sans-serif phụ trợ nếu font chính không khả dụng.
+body: Đây là các quy tắc áp dụng cho thẻ <body>.
+
+display: flex;: Sử dụng mô hình hiển thị linh hoạt để căn giữa nội dung trong trang.
+justify-content: center; và align-items: center;: Căn giữa nội dung theo cả chiều ngang và chiều dọc.
+min-height: 100vh;: Đảm bảo rằng chiều cao tối thiểu của trang là ít nhất bằng chiều cao của cửa sổ trình duyệt.
+background: url(/images/hinhanh.jpg) no-repeat;: Sử dụng hình ảnh với đường dẫn /images/hinhanh.jpg làm nền của trang và
+ không lặp lại hình ảnh.
+background-size: cover;: Kéo hình ảnh để nó phù hợp hoàn toàn với kích thước của cửa sổ trình duyệt.
+background-position: center;: Căn chỉnh hình ảnh nền theo trung tâm của trình duyệt.
+header: Đây là các quy tắc áp dụng cho phần tiêu đề của trang.
+
+position: fixed;: Đặt phần tiêu đề ở vị trí cố định, nó sẽ không cuộn lên khi người dùng cuộn trang.
+top: 0;, left: 0;, right: 100%;, width: 100%;: Đặt phần tiêu đề để nó che kín trên cùng của trình duyệt và chiếm toàn bộ chiều rộng.
+padding: 20px 100px;: Tạo khoảng cách bên trong phần tiêu đề.
+display: flex;: Sử dụng mô hình hiển thị linh hoạt cho phần tiêu đề để căn giữa các phần tử con.
+justify-content: space-between; và align-items: center;: Căn giữa các phần tử con theo chiều ngang và chiều dọc trong phần tiêu đề.
+.navigation a: Các quy tắc áp dụng cho các liên kết trong thanh điều hướng.
+
+position: relative;: Đặt vị trí tương đối để có thể sử dụng ::after để tạo thanh dưới liên kết.
+font-size: 1.1em;, color: #fff;, text-decoration: none;, font-weight: 500;: Điều chỉnh kích thước chữ, màu sắc,
+ loại bỏ gạch chân và độ đậm cho liên kết.
+margin-left: 40px;: Tạo khoảng cách bên trái giữa các liên kết.
+.navigation a::after: Các quy tắc để tạo thanh ngang dưới các liên kết khi rê chuột qua.
+
+content: '';: Tạo một nội dung giả để kết xuất thanh dưới liên kết.
+position: absolute;: Đặt phần tử ở vị trí tuyệt đối để nó nằm dưới liên kết.
+left: 0;, bottom: -6px;: Đặt vị trí và khoảng cách bên dưới liên kết.
+width: 100%;, height: 3px;, background: #fff;, border-radius: 5px;: Điều chỉnh kích thước và màu sắc cho thanh dưới liên kết.
+transform-origin: right;, transform: scaleX(0);, transition: transform .5s;: Sử dụng hiệu ứng chuyển đổi để làm cho thanh xuất 
+hiện và mở rộng từ bên phải khi rê chuột qua.
+
+
+
+.navigation a:hover::after: Các quy tắc này xác định hiệu ứng khi rê chuột qua liên kết trong thanh điều hướng.
+transform-origin: left;: Đặt trục chuyển đổi về phía bên trái.
+transform: scaleX(1);: Biến đổi chiều ngang của thanh dưới liên kết từ 0 (ẩn) thành 1 (hiển thị hoàn toàn) khi rê chuột qua.
+.navigation .btnLogin-popup: Các quy tắc này xác định kiểu dáng cho nút đăng nhập trong thanh điều hướng.
+
+width: 130px;, height: 50px;: Điều chỉnh kích thước của nút.
+background: transparent;: Đặt nền trong suốt cho nút.
+border: 2px solid #fff;: Tạo đường viền 2px dày màu trắng xung quanh nút.
+outline: none;: Loại bỏ đường viền xung quanh nút khi nó được tập trung.
+border-radius: 6px;: Làm cho góc của nút trở nên tròn.
+cursor: pointer;: Biểu tượng con trỏ khi di chuột qua nút.
+font-size: 1.1em;, color: #fff;, font-weight: 500;: Điều chỉnh kích thước chữ, màu sắc và độ đậm của văn bản trên nút.
+margin-left: 40px;: Tạo khoảng cách bên trái giữa nút và các liên kết trong thanh điều hướng.
+.navigation .btnLogin-popup:hover: Các quy tắc này xác định kiểu dáng khi rê chuột qua nút đăng nhập.
+
+background: #fff;: Thay đổi màu nền của nút thành màu trắng khi rê chuột qua.
+color: #121212;: Thay đổi màu chữ thành màu đen đậm khi rê chuột qua.
